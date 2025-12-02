@@ -1,106 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio - Bouariche Youssef</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
+    <title>Bouariche Youssef - Portfolio</title>
 </head>
+
 <body>
-  <header>
-    <div class="container entete">
-      <div class="name">Bouariche Youssef</div>
-      <nav>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#parcours">Parcours</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <a href="#accueil" class="logo navbar-brand">Youssef Bouariche</a>
+                
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bx bx-menu" id="menu-icon"></i>
+                </button>
+<!-- en-tête du site, navbar/header -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a href="#accueil" class="nav-link">Accueil</a>
+                        <a href="#apropos" class="nav-link">À propos</a>
+                        <a href="#parcours" class="nav-link">Parcours</a>
+                        <a href="#competences" class="nav-link">Compétences</a>
+                        <a href="#veille" class="nav-link">Veille</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- partie acceuil -->
+    <section class="accueil container-fluid d-flex align-items-center" id="accueil">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-5 text-center accueil-img mb-4 mb-lg-0 d-none d-lg-block">
+                    <img src="assets/profile.png" alt="Photo de Profil" class="img-fluid">
+                </div>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Bienvenue sur mon Portfolio !</h1>
-      <p class="subtitle"></p>
-    </section>
-    <hr>
+                <div class="col-lg-7 accueil-contenu">
+                    <h3>Bienvenue sur mon Portfolio !</h3>
+                    <h1>Youssef Bouariche</h1>
+                    <h3>Étudiant en informatique,<br> spécialisé en <span class="multiple-text">cybersécurité</span></h3>
+                    
+                    <div class="accueil-img text-center d-lg-none my-4">
+                        <img src="assets/profile.png" alt="Photo de Profil" class="img-fluid"> 
+                    </div>
 
-    <section id="apropos">
-      <h2>À propos</h2>
-      <div class="card">
-        <p>Bonjour, je m'appelle <strong>Youssef BOUARICHE</strong> et je suis actuellement <strong>étudiant en 1ère année de BTS SIO (Services Informatique Aux Organisations)</strong> au <strong>Lycée Saint-Bénigne</strong> à <strong>Dijon.</strong></p>
-      </div> 
-    </section> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore reprehenderit amet adipisci ut, rem
+                        deleniti cupiditate inventore et laboriosam ipsa soluta pariatur. Iusto, exercitationem consectetur.</p>
 
-    <section id="competences">
-      <h2>Compétences</h2>
-      <div class="row row-2">
-        <div class="card">
-          <h3>Systèmes & Réseaux</h3>
-          <ul>
-            <li>Installation et premiers réglages <strong>Debian</strong></li>
-            <li>Initiation au <strong>réseautage</strong> à l'aide de <strong>VirtualBox</strong></li>
-            <li>Bases IP, DNS (côté utilisateur), pare-feu (notions)</li>
-          </ul>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/youssef-bouariche"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://github.com/unityorha"><i class="bx bxl-github"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                    <a href="#" class="btn-custom">Télécharger mon CV</a>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Dev / Outils</h3>
-          <ul>
-            <li>HTML / CSS de base (pages statiques simples)</li>
-            <li>Git / GitHub</li>
-            <li>Découverte <strong>Docker</strong></li>
-          </ul>
+    </section>
+<!-- présentation du BTS -->
+   <section class="presentation container-fluid" id="presentation">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="entete">Qu'est-ce que le BTS <span>SIO</span> ?</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="text-center mb-5 description-bts">
+                        Le Brevet de Technicien Supérieur aux <span class="sio">Services Informatiques aux Organisations (BTS SIO)</span> est un programme de niveau Bac+2 qui s'adresse aux personnes souhaitant se former en deux ans aux métiers d'administrateur réseau ou de développeur. 
+                        <br><br>
+                        Il peut être réalisé soit en alternance, soit en initial avec un minimum de 10 semaines de stages obligatoires.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="bts-box">
+                        <div class="icon-box">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <h3>Spécialité <span>SLAM</span></h3>
+                        <p class="small-desc">Solutions Logicielles et Applications Métiers</p>
+                        <p>
+                            Cette spécialité vous formera au développement d'applications et de logiciels, à la conception de bases de données et à la programmation dans divers langages.
+                        </p>
+                        <h4>Métiers visés :</h4>
+                        <ul>
+                            <li><i class='bx bx-chevron-right'></i> Développeur Web / Mobile</li>
+                            <li><i class='bx bx-chevron-right'></i> Analyste-programmeur</li>
+                            <li><i class='bx bx-chevron-right'></i> Intégrateur Web</li>
+                            <li><i class='bx bx-chevron-right'></i> Technicien informatique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bts-box">
+                        <div class="icon-box">
+                            <i class='bx bx-network-chart'></i>
+                        </div>
+                        <h3>Spécialité <span>SISR</span></h3>
+                        <p class="small-desc">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                        <p>
+                            Cette spécialité vous formera à la gestion et la maintenance des infrastructures réseau, à l'administration des systèmes et à la cybersécurité.
+                        </p>
+                        <h4>Métiers visés :</h4>
+                        <ul>
+                            <li><i class='bx bx-chevron-right'></i> Administrateur systèmes et réseaux</li>
+                            <li><i class='bx bx-chevron-right'></i> Technicien support / réseau</li>
+                            <li><i class='bx bx-chevron-right'></i> Gestionnaire d’infrastructures</li>
+                            <li><i class='bx bx-chevron-right'></i> Expert Cybersécurité (Junior)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+        </div> 
 
-    <section id="projets">
-      <h2>Projets personnels</h2>
-      <div class="row">
-        <div class="card">
-          <h3>Portfolio Web (en cours)</h3>
-          <p>Petite page statique pour me présenter (structure simple, sans JS pour le moment). Maquettes sur Figma.</p>
-          <p><strong>Outil(s) utilisé(s) :</strong> HTML, CSS, Figma</p>
+        <div class="row mt-5"> <div class="col-12 text-center">
+                    <p class="mb-4" style="font-size: 1.4rem;">Pour aller plus loin dans le détail des compétences :</p>
+                    
+                    <a href="assets/referentiel.pdf" target="_blank" class="btn-custom">
+                        <i class='bx bxs-file-pdf'></i> Consulter le référentiel BTS SIO
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="card">
-          <h3>Labs VirtualBox</h3>
-          <p>Test de réglages réseau sur des machines virtuelles Linux Debian</p>
-          <p><strong>Outil(s) utilisé(s) :</strong> VirtualBox</p>
+    </section>
+<!-- partie à propos -->
+    <section class="apropos container-fluid" id="apropos">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 apropos-contenu order-2 order-lg-1">
+                    <h2 class="entete">À propos de <span>moi</span></h2>
+                    <h3>Étudiant en <span>informatique</span></h3>
+                    <p>Bonjour, je m'appelle Youssef Bouariche et je suis actuellement en <span>1ère année de BTS
+                            SIO</span> au Lycée Saint-Bénigne à Dijon.</p>
+                    <a href="#" class="btn-custom">En savoir plus</a>  
+                </div>
+
+                <div class="col-lg-5 apropos-img text-center order-1 order-lg-2 mb-5 mb-lg-0">
+                    <img src="assets/apropos.png" alt="Image à propos" class="img-fluid">
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Découverte Docker</h3>
-          <p>Tests de quelques images en local pour comprendre les bases (run, stop, rm) et noter les commandes.</p>
-          <p><strong>Outil(s) utilisé(s) :</strong> VirtualBox, Docker</p>
+    </section>
+<!-- partie compétences -->
+    <section class="competences" id="competences">
+        <div class="container text-center">
+            <h2 class="entete">Mes <span>compétences</span></h2>
         </div>
-      </div>
-    </section>
+     </section>
 
-    <section id="parcours">
-      <h2>Parcours</h2>
-      <div class="card">
-        <p><strong>BTS SIO</strong> – Spécialité <strong>SISR</strong> – Établissement privé à Dijon.</p>
-        <p>Objectif : spécialisation en cybersécurité en poursuivant vers une licence.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email : <a href="mailto:bouariche@outlook.fr">bouariche@outlook.fr</a></p>
-        <p>GitHub : <a href="https://github.com/unityorha">unityorha</a></p>
-      </div>
-    </section>
-
-    <hr>
-    <section>
-      <p style="color:var(--muted); font-size:14px;">Dernière mise à jour : 18 novembre 2025 • Ce site est volontairement minimal pour être maintenable en 1<sup>re</sup> année.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">© Bouariche Youssef – BTS SIO</div>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
