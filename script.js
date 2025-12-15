@@ -1,36 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector('#menu-icon');
-    const navbarCollapse = document.querySelector('.navbar-collapse'); // La partie déroulante
+    const navbarCollapse = document.querySelector('.navbar-collapse'); // la partie déroulante
     
-    // On crée une instance Bootstrap du menu pour pouvoir le contrôler
+    // on crée une instance Bootstrap du menu pour pouvoir le contrôler
     const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false // On ne l'ouvre pas au chargement
+        toggle: false // on ne l'ouvre pas au chargement
     });
 
-    // 1. GESTION DU CLIC (Pour changer l'icône)
-    // On écoute l'événement d'ouverture de Bootstrap
+    // gestion du clic (Pour changer l'icône)
+    // on écoute l'événement d'ouverture de Bootstrap
     navbarCollapse.addEventListener('show.bs.collapse', function () {
-        menuIcon.classList.add('bx-x'); // Devient une croix
+        menuIcon.classList.add('bx-x'); // = deviens une croix
     });
 
-    // On écoute l'événement de fermeture de Bootstrap
+    // on écoute l'événement de fermeture de Bootstrap
     navbarCollapse.addEventListener('hide.bs.collapse', function () {
-        menuIcon.classList.remove('bx-x'); // Redevient 3 traits
+        menuIcon.classList.remove('bx-x'); // = redevient 3 traits
     });
 
-    // 2. FERMETURE AU SCROLL
+    // fermeture au scroll
     window.onscroll = () => {
-        // Si le menu est ouvert (classe 'show'), on le ferme
+        // Si le menu est ouvert (classe 'show') on le ferme
         if (navbarCollapse.classList.contains('show')) {
-            bsCollapse.hide(); // Commande Bootstrap pour fermer avec l'animation fluide
+            bsCollapse.hide(); // ocmmande Bootstrap pour fermer avec l'animation fluide
         }
     };
 });
 
 const typed = new Typed('.multiple-text', {
-      strings: ['cybersécurité', 'réseau',],
-      typeSpeed: 80,
-      backSpeed: 80,
+      strings: ['cybersécurité', 'infrastructure réseau','administration système',],
+      typeSpeed: 70,
+      backSpeed: 70,
       backDelay: 1200,
       loop: true,
     });

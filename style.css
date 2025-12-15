@@ -8,54 +8,54 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif; /* J'ai mis Poppins par defaut si dispo, sinon system */
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
-    --bg-color: #fff;
+    --bg-color: #fff;     
     --snd--bg-color: #F3EEFF;
     --text-color: #000000;
-    --main-color: #8A79FF;
+    --main-color: #6A52D8;  
 }
 
 html {
-    font-size: 62.5%; /* Attention: cela affecte aussi Bootstrap (1rem = 10px) */
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    /* On s'assure que la police est lisible avec le reset de taille */
     font-size: 1.6rem; 
 }
 
-section {
-    padding: 6rem 0; /* Padding ajusté pour le container Bootstrap */
-    width: 100%;
+a, .nav-link,.btn-custom {
+    text-decoration: none !important;
 }
 
-/* --- Header / Navbar Adaptée Bootstrap --- */
+section {
+    padding: 6rem 0;
+    width: 100%;
+    scroll-margin-top: 8rem;
+}
+
+/*  HEADER  */
 .header {
-    background: var(--main-color); /* Couleur de fond */
+    background: var(--main-color);
     backdrop-filter: blur(10px);
-    padding: 1rem 5%; /* Ajustement padding */
+    padding: 1rem 5%;
     transition: all 0.5s ease;
 }
 
 .logo {
-    font-size: 3rem !important; /* Force la taille sur Bootstrap */
+    font-size: 3rem !important;
     color: var(--bg-color) !important;
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
 }
+.logo:hover { transform: scale(1.05); }
 
-.logo:hover {
-    transform: scale(1.05);
-}
-
-/* Liens de navigation */
 .navbar-nav .nav-link {
     font-size: 1.9rem;
     color: var(--bg-color);
@@ -63,47 +63,38 @@ section {
     font-weight: 700;
     transition: 0.3s ease;
 }
-
-/* Suppression du soulignement ou couleur bleu par défaut de Bootstrap */
 .navbar-nav .nav-link:hover, 
-.navbar-nav .nav-link.active, 
-.navbar-nav .nav-link:focus {
+.navbar-nav .nav-link.active {
     color: var(--text-color);
 }
 
-/* Icone Menu Burger (Personnalisation) */
-.navbar-toggler {
-    border: none;
-    outline: none;
-    box-shadow: none !important;
-}
+.navbar-toggler { border: none; outline: none; box-shadow: none !important; }
 
 #menu-icon {
     font-size: 3.6rem;
     color: var(--bg-color);
     cursor: pointer;
+    transition: transform 0.4s ease, color 0.3s ease; 
 }
+#menu-icon.bx-x { transform: rotate(180deg); color: var(--bg-color); }
 
-/* --- Section Accueil --- */
+
+/* PARTIE ACCUEIL */
 .accueil {
     min-height: 100vh;
 }
+
 .accueil-img img {
-    width: 25vw; /* Taille desktop */
+    width: 25vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     animation: floatImage 4s ease-in-out infinite;
     transition: 0.4s ease;
 }
-
 .accueil-img img:hover {
-    box-shadow: 0 0 25px var(--main-color), 
-                0 0 35px var(--main-color), 
-                0 0 45px var(--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 35px var(--main-color), 0 0 45px var(--main-color);
 }
-
-/* Animation flottante */
 @keyframes floatImage {
     0% { transform: translateY(0); }
     50% { transform: translateY(-2.4rem); }
@@ -114,42 +105,26 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
 }
-
-.accueil-contenu h3:nth-of-type(2) {
-    margin-bottom: 2rem;
-}
-
-span {
-    color: var(--main-color);
-}
-
+.accueil-contenu h3:nth-of-type(2) { margin-bottom: 2rem; }
 .accueil-contenu h1 {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
 }
-
-.accueil-contenu p {
-    font-size: 1.6rem;
-}
+.accueil-contenu p { font-size: 1.6rem; }
+span { color: var(--main-color); }
 
 /* Réseaux sociaux */
 .social a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 42px; height: 42px;
     background: transparent;
     border: 0.2rem solid var(--main-color);
     border-radius: 50%;
-    font-size: 2rem;
-    color: var(--main-color);
+    font-size: 2rem; color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    text-decoration: none; /* Enlève soulignement Bootstrap */
 }
-
 .social a:hover {
     transform: scale(1.2) translateY(-10px);
     background-color: var(--main-color);
@@ -157,7 +132,7 @@ span {
     box-shadow: 0 0 25px var(--main-color);
 }
 
-/* Boutons (J'ai renommé .btn en .btn-custom pour éviter conflit Bootstrap) */
+/* Boutons */
 .btn-custom {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -169,232 +144,251 @@ span {
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease;
-    text-decoration: none;
 }
-
 .btn-custom:hover {
     box-shadow: 0 0 1.6rem var(--main-color);
     color: var(--bg-color);
 }
 
-/* section présentation du BTS */
+
+/*  PARTIE PRESENTATION BTS */
 .presentation {
+    background: var(--snd--bg-color); 
+}
+.description-bts { font-size: 1.6rem; line-height: 1.8; }
+
+.bts-box {
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: 0.4s ease;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.bts-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
     background: var(--snd--bg-color);
 }
-/* --- Section À Propos --- */
+.icon-box i { font-size: 5rem; color: var(--main-color); margin-bottom: 1rem; }
+.bts-box h3 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+.bts-box h4 { font-size: 1.8rem; margin-top: 2rem; text-align: left; padding-left: 2rem; color: var(--main-color); }
+.bts-box ul { list-style: none; text-align: left; padding-left: 2rem; }
+.bts-box ul li { font-size: 1.5rem; margin-bottom: 0.8rem; display: flex; align-items: center; }
+.bts-box ul li i { color: var(--main-color); font-size: 2rem; margin-right: 0.5rem; }
 
+
+/* PARTIE A PROPOS */
+.apropos {
+    background: var(--bg-color); 
+}
 
 .apropos-img img {
-    width: 25vw; /* Taille desktop */
+    width: 25vw;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease;
 }
-
 .apropos-img img:hover {
-    box-shadow: 0 0 25px var(--main-color), 
-                0 0 35px var(--main-color), 
-                0 0 45px var(--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 35px var(--main-color), 0 0 45px var(--main-color);
+}
+.entete { font-size: 6rem; text-align: left; }
+.apropos-contenu h2 { line-height: 1.2; }
+.apropos-contenu h3 { font-size: 2.6rem; }
+.apropos-contenu p { font-size: 1.6rem; margin: 2rem 0 3rem; }
+
+
+/* PARCOURS */
+.parcours {
+    background: var(--snd--bg-color); /* VIOLET */
 }
 
-.entete {
-    font-size: 6rem;
-    text-align: left; /* Par defaut */
-}
-
-/* Sur mobile, on veut centrer le titre */
-@media (max-width: 991px) {
-    .entete {
-        text-align: center;
-        font-size: 4.5rem;
-    }
-}
-
-.apropos-contenu h2 {
-    line-height: 1.2;
-}
-.apropos-contenu h3 {
+.parcours-title {
     font-size: 2.6rem;
-}
-.apropos-contenu p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
-.competences {
-    background: var(--snd--bg-color);
-}
-
-/* --- Style Section BTS SIO --- */
-
-.sous-titre {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.description-bts {
-    font-size: 1.6rem;
-    line-height: 1.8;
-}
-
-/* Design des boites SLAM/SISR */
-.bts-box {
-    background: var(--bg-color);
-    border: 2px solid var(--main-color); /* Bordure violette fine */
-    border-radius: 2rem;
-    padding: 3rem 2rem;
-    text-align: center;
-    transition: 0.4s ease;
-    height: 100%; /* Pour que les 2 boites aient la même hauteur */
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.bts-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color), 
-                0 0 35px var(--main-color);
-    background: var(--snd--bg-color); /* Fond violet très clair au survol */
-}
-
-/* Les icônes (Code / Réseau) */
-.icon-box i {
-    font-size: 5rem;
     color: var(--main-color);
-    margin-bottom: 1rem;
-}
-
-.bts-box h3 {
-    font-size: 2.6rem;
-    margin-bottom: 0.5rem;
-}
-
-.small-desc {
-    font-size: 1.4rem;
-    font-style: italic;
     margin-bottom: 2rem;
-    opacity: 0.8;
+    display: flex; align-items: center; gap: 1rem;
+}
+.parcours-title i { font-size: 3rem; }
+
+/* timeline du parcours */
+.timeline-box {
+    border-left: 3px solid var(--main-color);
+    margin-left: 1rem; padding-left: 2rem;
+}
+.timeline-item { position: relative; margin-bottom: 3rem; }
+
+.circle-dot {
+    position: absolute;
+    left: -2.9rem; top: 0.5rem;
+    height: 1.5rem; width: 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px var(--main-color);
 }
 
-.bts-box h4 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: left;
-    padding-left: 2rem;
-    color: var(--main-color);
+.timeline-date {
+    font-size: 1.4rem; color: var(--main-color);
+    font-weight: 600; margin-bottom: 0.5rem;
+    background: var(--bg-color); 
+    display: inline-block; padding: 0.2rem 1rem; border-radius: 1rem;
 }
 
-/* Liste des métiers */
-.bts-box ul {
-    list-style: none;
-    text-align: left;
-    padding-left: 2rem;
+.timeline-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color); }
+.timeline-text { font-size: 1.5rem; color: var(--text-color); line-height: 1.4; opacity: 0.8; }
+.timeline-item:hover .circle-dot { transform: scale(1.3); transition: .3s; }
+
+
+/* partie compétences */
+.competences {
+    background: var(--bg-color); /* BLANC */
 }
 
-.bts-box ul li {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-    display: flex;
+/* grille des compétences */
+
+.skill-card {
+    background: var(--bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    text-align: center; 
+    transition: 0.4s ease;
+    height: 100%; 
+    border: 1px solid transparent; 
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(106, 82, 216, 0.15);
+    border-color: var(--main-color);
+}
+
+/* Le cercle de l'icône */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--main-color);
+    border-radius: 50%;
+    display: inline-flex; 
     align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px var(--main-color); 
+    transition: 0.4s ease;
 }
 
-.bts-box ul li i {
+.skill-card:hover .skill-icon {
+    background: var(--bg-color); 
     color: var(--main-color);
-    font-size: 2rem;
-    margin-right: 0.5rem;
+    border: 2px solid var(--main-color);
+    box-shadow: none;
 }
 
 
+.skill-icon i {
+    font-size: 4rem;
+    color: var(--bg-color);
+    transition: 0.4s ease;
+}
+
+.skill-card:hover .skill-icon i {
+    color: var(--main-color); 
+}
+
+/* Titre de la compétence */
+.skill-card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Description */
+.skill-card p {
+    font-size: 1.5rem;
+    color: #666; /* Gris foncé pour le texte descriptif */
+    line-height: 1.6;
+}
+
+/* le pop-up en savoir plus */
+.custom-modal-style {
+    background-color: var(--snd--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 25px var(--main-color);
+    color: var(--text-color);
+}
+.modal-header { border-bottom: 1px solid rgba(106, 82, 216, 0.2); padding: 1.5rem 2rem; }
+.entete-modal { font-size: 2.8rem; font-weight: 700; }
+.entete-modal span { color: var(--main-color); }
+.modal-body { padding: 2rem; }
+
+/* Sous-titres */
+.modal-subtitle {
+    font-size: 2rem; font-weight: 600;
+    margin-bottom: 1.5rem; display: flex; align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;
+}
+.qualites-title { color: #28a745; }
+.qualites-title i { margin-right: 1rem; color: #28a745; font-size: 2.4rem; }
+.defauts-title { color: #dc3545; }
+.defauts-title i { margin-right: 1rem; color: #dc3545; font-size: 2.4rem; }
+.passions-title { color: var(--main-color); margin-top: 1rem; }
+.passions-title i { margin-right: 1rem; color: var(--main-color); font-size: 2.4rem; }
+
+/* Listes */
+.modal-list li { font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
+.modal-list i { font-size: 1.8rem; margin-right: 1rem; margin-top: 0.2rem; flex-shrink: 0; }
+.modal-list .bx-check { color: #28a745; }
+.modal-list .bx-x { color: #dc3545; }
+.modal-list strong { margin-right: 0.5rem; }
+
+/* Grille Passions */
+.passions-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.passion-item {
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    padding: 0.8rem 1.5rem;
+    display: flex; align-items: center;
+    font-size: 1.4rem; font-weight: 500; transition: 0.3s;
+}
+.passion-item i { font-size: 1.8rem; color: var(--main-color); margin-right: 0.8rem; }
+.passion-item:hover {
+    background: var(--main-color);
+    color: var(--snd--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(106, 82, 216, 0.3);
+}
+.passion-item:hover i, .passion-item:hover span { color: var(--snd--bg-color); }
+
+.modal-footer { border-top: none; padding: 1.5rem; }
+.btn-close { opacity: 1; }
 
 
-
-
-/* --- Media Queries (Adaptation Mobile) --- */
+/*  RESPONSIVE  */
 @media (max-width: 991px) {
-    /* Ajustement images sur Tablette/Mobile */
-    .accueil-img img, 
-    .apropos-img img {
-        width: 55vw; /* Beaucoup plus grand sur mobile */
-        margin-top: 2rem;
-    }
-
-    .header {
-        padding: 1rem 3%;
-    }
-
-    /* Le menu mobile (fond violet quand ouvert) */
-    .navbar-collapse {
-        background: var(--main-color);
-        padding: 1rem;
-        border-radius: 0 0 1rem 1rem;
-    }
-
-    .navbar-nav .nav-link {
-        margin-left: 0;
-        margin-bottom: 1rem;
-        display: block;
-        text-align: center;
-    }
-
-    .accueil-contenu {
-        text-align: center;
-        margin-left: 0; /* Reset marge desktop */
-        margin-top: 2rem;
-    }
-    
-    .apropos-contenu {
-        text-align: center;
-        padding: 0;
-    }
-
-    .apropos-contenu h2 {
-        text-align: center;
-    }
+    .accueil-img img, .apropos-img img { width: 55vw; margin-top: 2rem; }
+    .header { padding: 1rem 3%; }
+    .navbar-collapse { background: var(--main-color); padding: 1rem; border-radius: 0 0 1rem 1rem; }
+    .navbar-nav .nav-link { margin-left: 0; margin-bottom: 1rem; display: block; text-align: center; }
+    .accueil-contenu, .apropos-contenu { text-align: center; margin-left: 0; margin-top: 2rem; padding: 0; }
+    .apropos-contenu h2 { text-align: center; }
+    .entete { text-align: center; font-size: 4.5rem; }
+    .parcours-title { justify-content: center; } 
 }
 
 @media (max-width: 450px) {
-    html {
-        font-size: 55%; /* Réduire légèrement texte sur très petit écran */
-    }
-    
-    .accueil-contenu h1 {
-        font-size: 4rem;
-    }
-
-    .accueil-img img, 
-    .apropos-img img {
-        width: 80vw;
-    }
+    html { font-size: 55%; }
+    .accueil-contenu h1 { font-size: 4rem; }
+    .accueil-img img, .apropos-img img { width: 80vw; }
 }
 
-/* --- Correctif pour les écrans moyens (Tablettes / Petits PC) --- */
 @media (min-width: 992px) and (max-width: 1188px) {
-    /* On réduit la taille des liens et l'espacement */
-    .navbar-nav .nav-link {
-        font-size: 1.4rem;  /* Au lieu de 1.9rem */
-        margin-left: 1.5rem; /* Au lieu de 3rem ou 4rem */
-    }
-
-    /* On réduit un peu le logo aussi pour gagner de la place */
-    .logo {
-        font-size: 2.4rem !important;
-    }
-}
-
-/* Animation de l'icône du menu */
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--bg-color);
-    cursor: pointer;
-    /* C'est ici que la magie opère pour la fluidité */
-    transition: transform 0.4s ease, color 0.3s ease; 
-}
-
-/* Quand l'icône devient une croix */
-#menu-icon.bx-x {
-    transform: rotate(180deg); /* Fait tourner l'icône de 180 degrés */
-    color: var(--bg-color);
+    .navbar-nav .nav-link { font-size: 1.4rem; margin-left: 1.5rem; }
+    .logo { font-size: 2.4rem !important; }
 }
