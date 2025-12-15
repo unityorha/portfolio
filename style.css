@@ -368,7 +368,175 @@ span { color: var(--main-color); }
 
 .modal-footer { border-top: none; padding: 1.5rem; }
 .btn-close { opacity: 1; }
+/* PARTIE VEILLE TECHNOLOGIQUE */
+.veille {
+    background: var(--snd--bg-color); /* Fond violet clair */
+}
 
+/* --- ACCORDÉON (MÉTHODOLOGIE) --- */
+.custom-accordion .accordion-item {
+    background: var(--bg-color);
+    border: none;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    overflow: hidden; /* Pour que le radius s'applique bien */
+}
+
+.custom-accordion .accordion-button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--bg-color);
+    box-shadow: none; /* Enlève l'effet bleu par défaut de Bootstrap */
+    padding: 2rem;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--main-color);
+    color: var(--bg-color); /* Texte blanc quand ouvert */
+}
+
+/* L'icône change de couleur quand ouvert */
+.custom-accordion .accordion-button:not(.collapsed) i {
+    color: var(--bg-color);
+}
+.custom-accordion .accordion-button i {
+    color: var(--main-color);
+    font-size: 2.2rem;
+    margin-right: 1rem;
+}
+
+/* La petite flèche par défaut de bootstrap */
+.custom-accordion .accordion-button::after {
+    filter: grayscale(100%); /* Flèche grise par défaut */
+}
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1); /* Flèche blanche quand ouvert */
+}
+
+.custom-accordion .accordion-body {
+    font-size: 1.6rem;
+    padding: 2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.custom-accordion .accordion-body ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.custom-accordion .accordion-body ul li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.custom-accordion .accordion-body ul li i {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* --- CAROUSEL (ARTICLES) --- */
+
+/* Carte de l'article */
+.veille-card {
+    background: var(--bg-color);
+    border-radius: 2rem;
+    padding: 4rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+    position: relative;
+    margin: 1rem;
+}
+
+.veille-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(106, 82, 216, 0.2);
+    border-color: var(--main-color);
+}
+
+.veille-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.badge-theme {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.veille-meta {
+    font-size: 1.4rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.veille-meta i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+.veille-card h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.veille-card p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+}
+
+.small-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 2rem;
+    background-size: 50%; 
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+    height: 4px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .veille-card {
+        padding: 2rem;
+    }
+    .veille-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .veille-card h3 {
+        font-size: 2rem;
+    }
+    .custom-accordion .accordion-button {
+        font-size: 1.6rem;
+    }
+}
 
 /*  RESPONSIVE  */
 @media (max-width: 991px) {
