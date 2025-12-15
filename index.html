@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.webp" type="image/jpeg">
     <title>Bouariche Youssef - Portfolio</title>
 </head>
 
@@ -23,10 +24,10 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <div class="navbar-nav">
-                        <a href="#accueil" class="nav-link active">Accueil</a>
                         <a href="#apropos" class="nav-link">À propos</a>
                         <a href="#parcours" class="nav-link">Parcours</a>
                         <a href="#competences" class="nav-link">Compétences</a>
+                        <a href="#projets" class="nav-link">Projets</a>
                         <a href="#veille" class="nav-link">Veille</a>
                         <a href="#contact" class="nav-link">Contact</a>
                     </div>
@@ -34,7 +35,7 @@
             </div>
         </nav>
     </header>
-
+<!-- partie accueil -->
     <section class="accueil container-fluid d-flex align-items-center" id="accueil">
         <div class="container">
             <div class="row align-items-center">
@@ -310,10 +311,94 @@
             </div>
         </div>
     </section>
+
+    <!-- partie projets -->
+<section class="projets container-fluid" id="projets">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="entete">Mes <span>Projets</span></h2>
+            <p style="font-size: 1.6rem; margin-top: 1rem;">Découvrez mes réalisations techniques et académiques</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="bts-box d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="icon-box">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <h3>Portfolio Personnel</h3>
+                        <p class="small-desc">Développement Web</p>
+                        <p>
+                            Conception et développement de ce site portfolio responsive pour présenter mon parcours. Code source complet disponible sur GitHub.
+                        </p>
+                        <div class="mb-4">
+                            <span class="badge bg-primary">HTML5</span>
+                            <span class="badge bg-primary">CSS3</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/unityorha/portfolio" target="_blank" class="btn-custom py-2 px-4" style="font-size: 1.4rem;">
+                        <i class='bx bxl-github'></i> Voir le repo
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="bts-box d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="icon-box">
+                            <i class='bx bxl-docker'></i>
+                        </div>
+                        <h3>Conteneurisation Web</h3>
+                        <p class="small-desc">Infrastructure & Docker</p>
+                        <p>
+                            Création d'images personnalisées Debian/Apache2 et déploiement de conteneurs web statiques interconnectés via un réseau LAN dédié.
+                        </p>
+                        <div class="mb-4">
+                            <span class="badge bg-primary">Docker</span>
+                            <span class="badge bg-primary">Apache2</span>
+                            <span class="badge bg-primary">Linux Debian</span>
+                        </div>
+                    </div>
+                    <a href="assets/compte_rendu_docker.pdf" target="_blank" class="btn-custom py-2 px-4" style="font-size: 1.4rem;">
+                        <i class='bx bxs-file-pdf'></i> Lire le rapport
+                    </a>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-md-6">
+                <div class="bts-box d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="icon-box">
+                            <i class='bx bx-server'></i>
+                        </div>
+                        <h3>Virtualisation & GLPI</h3>
+                        <p class="small-desc">Systèmes & Réseaux</p>
+                        <p>
+                            Mise en place d'une architecture virtuelle (AD, DNS, DHCP) et déploiement d'une solution de gestion de parc GLPI accessible via pont réseau.
+                        </p>
+                        <div class="mb-4">
+                            <span class="badge bg-primary">VirtualBox</span>
+                            <span class="badge bg-primary">Windows Server</span>
+                            <span class="badge bg-primary">GLPI</span>
+                        </div>
+                    </div>
+                    <a href="assets/compte_rendu_virtualisation.pdf" target="_blank" class="btn-custom py-2 px-4" style="font-size: 1.4rem;">
+                        <i class='bx bxs-file-pdf'></i> Lire le rapport
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- partie veille -->
   <section class="veille container-fluid" id="veille">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="entete">Ma <span>Veille Techno</span></h2>
+                <h2 class="entete">Ma <span>Veille Technologique</span></h2>
             </div>
 
             <div class="row justify-content-center mb-5">
@@ -487,7 +572,55 @@
             
         </div>
     </section>
-    
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="entete">Me <span>Contacter</span></h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="contact-info text-center">
+                        <h3 class="contact-title">Discutons de votre projet</h3>
+                        <p class="contact-desc">
+                            Je suis à l'écoute d'opportunités de stage, d'alternance ou de collaboration. 
+                            N'hésitez pas à me joindre via les canaux ci-dessous.
+                        </p>
+
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-item flex-column">
+                                    <div class="contact-icon mb-3 mx-auto"><i class='bx bxs-envelope'></i></div>
+                                    <div class="contact-text">
+                                        <h4>Email</h4>
+                                        <a href="mailto:bouariche@outlook.fr">bouariche@outlook.fr</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-item flex-column">
+                                    <div class="contact-icon mb-3 mx-auto"><i class='bx bxs-map'></i></div>
+                                    <div class="contact-text">
+                                        <h4>Localisation</h4>
+                                        <p>Dijon, France</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social mt-4">
+                            <h4>Mes Réseaux</h4>
+                            <div class="social-links justify-content-center d-flex">
+                                <a href="https://www.linkedin.com/in/youssef-bouariche" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                <a href="https://github.com/unityorha" target="_blank"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 <!-- la pop up quand on clique sur en savoir plus -->
     <div class="modal fade" id="modal-qualites-defauts" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -571,7 +704,34 @@
             </div>
         </div>
     </div>
+<footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2>Youssef Bouariche</h2> 
 
+                <div class="footer-details">
+                    <p><strong>Localisation :</strong> France, 21000 Dijon</p>
+                    <p><strong>Email :</strong> <a href="mailto:bouariche@outlook.fr">bouariche@outlook.fr</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; Copyright <strong>2025</strong>. Tous droits réservés</p>
+                    <p>Made by <span>Youssef Bouariche</span></p>
+                </div>
+
+                <div class="footer-social-wrapper">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/youssef-bouariche" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/unityorha" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a> </div>
+                    
+                    <a href="#accueil" class="scroll-top"><i class='bx bx-up-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>

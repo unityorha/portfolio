@@ -204,7 +204,7 @@ span { color: var(--main-color); }
 
 /* PARCOURS */
 .parcours {
-    background: var(--snd--bg-color); /* VIOLET */
+    background: var(--snd--bg-color); 
 }
 
 .parcours-title {
@@ -310,7 +310,7 @@ span { color: var(--main-color); }
 /* Description */
 .skill-card p {
     font-size: 1.5rem;
-    color: #666; /* Gris foncé pour le texte descriptif */
+    color: #666; 
     line-height: 1.6;
 }
 
@@ -380,7 +380,7 @@ span { color: var(--main-color); }
     border-radius: 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    overflow: hidden; /* Pour que le radius s'applique bien */
+    overflow: hidden; 
 }
 
 .custom-accordion .accordion-button {
@@ -388,7 +388,7 @@ span { color: var(--main-color); }
     font-weight: 600;
     color: var(--text-color);
     background: var(--bg-color);
-    box-shadow: none; /* Enlève l'effet bleu par défaut de Bootstrap */
+    box-shadow: none; 
     padding: 2rem;
 }
 
@@ -538,6 +538,233 @@ span { color: var(--main-color); }
     }
 }
 
+/* PARTIE CONTACT */
+.contact {
+    background: var(--bg-color);
+}
+
+.contact-info {
+    background: var(--snd--bg-color);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.contact-info:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 25px rgba(106, 82, 216, 0.15);
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.contact-desc {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto; 
+}
+/* Email - Localisation */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon {
+    width: 6rem;
+    height: 6rem;
+    background: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    color: var(--main-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--main-color);
+    transition: 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: translateY(-5px);
+}
+
+.contact-text h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-text a, .contact-text p {
+    font-size: 1.7rem;
+    color: #666;
+    transition: 0.3s;
+}
+
+.contact-text a:hover {
+    color: var(--main-color);
+    text-decoration: underline !important;
+}
+
+/* Réseaux sociaux */
+.contact-social h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-social .social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin: 0 1rem;
+    transition: 0.3s ease;
+}
+
+.contact-social .social-links a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--main-color); 
+    color: var(--bg-color); 
+    padding: 5rem 0 2rem;
+    position: relative;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.footer-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.footer-details p {
+    font-size: 1.7rem;
+    margin: 0.8rem 0;
+    opacity: 0.9;
+}
+
+.footer-details strong {
+    font-weight: 600;
+}
+
+.footer-details a {
+    color: var(--bg-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-details a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Partie basse avec la ligne de séparation */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* la ligne fine */
+    padding-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.copyright p {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.copyright span {
+    color: var(--bg-color); 
+    font-weight: 600;
+}
+
+.footer-social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Icônes réseaux sociaux */
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    color: var(--bg-color);
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--bg-color); 
+    color: var(--main-color); 
+    transform: translateY(-5px);
+}
+
+/* Bouton retour en haut (fleche carrée à droite) */
+.scroll-top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: var(--bg-color);
+    font-size: 2.4rem;
+    transition: 0.3s ease;
+}
+
+.scroll-top:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
 /*  RESPONSIVE  */
 @media (max-width: 991px) {
     .accueil-img img, .apropos-img img { width: 55vw; margin-top: 2rem; }
